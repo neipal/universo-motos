@@ -1,0 +1,483 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ff6b00;
+    --secondary-color: #cc5500;
+    --text-color: #1f2937;
+    --light-bg: #f3f4f6;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--black);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    padding: 0.5rem 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(42, 42, 42, 0.95), rgba(42, 42, 42, 0.95)), url('https://images.unsplash.com/vector-1742740878620-9809dab0fd52?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    padding: 8rem 0 4rem;
+    color: var(--white);
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: left;
+}
+
+.hero-image-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.hero-text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: var(--white);
+    font-weight: 300;
+}
+
+/* Buttons */
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 4rem 0;
+    background-color: var(--white);
+}
+
+.benefits h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    padding: 2rem;
+    background-color: var(--light-bg);
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* How it Works Section */
+.how-it-works {
+    padding: 4rem 0;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.how-it-works h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    color: var(--black);
+}
+
+.step-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.step h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+
+.contact p {
+    margin-bottom: 2rem;
+    color: #4b5563;
+}
+
+/* Footer */
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Comparison Section */
+.comparison {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+}
+
+.comparison h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.comparison-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.comparison-card:hover {
+    transform: translateY(-5px);
+}
+
+.comparison-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.comparison-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comparison-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.comparison-list li:before {
+    content: "✓";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+.comparison-summary {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.comparison-summary p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-text {
+        font-size: 0.9rem;
+    }
+    
+    .benefits-grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .company-description h3 {
+        font-size: 1.2rem;
+    }
+    
+    .company-description p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Typography */
+h1, h2, h3 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+strong {
+    color: var(--primary-color);
+}
+
+/* Sección Empresas */
+.companies {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.companies h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.company-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.company-logo {
+    flex: 0 0 300px;
+    text-align: center;
+}
+
+.company-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.company-description {
+    flex: 1;
+}
+
+.company-description h3 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.company-description p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.company-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.company-features li {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.company-features li:before {
+    content: "✓";
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Responsive para la sección Empresas */
+@media (max-width: 768px) {
+    .company-content {
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .company-logo {
+        flex: 0 0 auto;
+        max-width: 250px;
+    }
+
+    .company-description h3 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .company-description p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .company-features li {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+} 
