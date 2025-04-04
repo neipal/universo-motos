@@ -265,8 +265,47 @@ nav a:hover {
 footer {
     background-color: var(--black);
     color: var(--white);
-    padding: 2rem 0;
+    padding: 2.5rem 0;
     text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-icon {
+    color: var(--white);
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+    padding: 0.75rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 4.5rem;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .social-icons {
+        gap: 1.5rem;
+    }
+    
+    .social-icon {
+        font-size: 2rem;
+        width: 4rem;
+        height: 4rem;
+        padding: 0.6rem;
+    }
 }
 
 /* Comparison Section */
