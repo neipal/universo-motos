@@ -8,8 +8,8 @@ function calculateDepreciation() {
     }
 
     // Tasas de depreciación
-    const newMotoFirstYearRate = 0.30; // 30% primer año
-    const newMotoAnnualRate = 0.15; // 15% años siguientes
+    const newMotoFirstYearRate = 0.26; // 26% primer año
+    const newMotoAnnualRate = 0.10; // 10% años siguientes
     const usedMotoAnnualRate = 0.10; // 10% anual
 
     // Cálculos para moto nueva
